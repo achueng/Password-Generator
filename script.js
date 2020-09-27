@@ -12,3 +12,6 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+// Password length
+var passLength = Number(document.querySelector("#pass-length").value);
