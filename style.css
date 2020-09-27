@@ -118,6 +118,14 @@ button[disabled] {
   overflow: hidden;
 }
 
+#length-label {
+  font-size: 16px;
+}
+
+#pass-length {
+  width: 8rem;
+}
+
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
