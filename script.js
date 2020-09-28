@@ -51,3 +51,8 @@ if (userSc === true) {
   charTypes.push(special);
 }
 
+// Generate password function with dummy text as placeholder to ensure it works
+function generatePassword() {
+  var userPass = "test test 123"
+  return userPass;
+}
