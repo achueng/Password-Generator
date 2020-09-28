@@ -51,6 +51,11 @@ if (userSc === true) {
 // Generate password function with dummy text as placeholder to ensure it works
 function generatePassword() {
   var passLength = Number(document.getElementById("pass-length").value);
+  // If user does not input a value for passLength, they will be alerted to do so before a password is generated
+  if (passLength === 0) {
+    alert("Please input how long you want your password to be.");
+  }
+
   var userPass = ""
 
   // For loop to randomly take a character to include in password
