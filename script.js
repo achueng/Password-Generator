@@ -28,16 +28,22 @@ var upper = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q"
 var num = ["1","2","3","4","5","6","7","8","9","0"];
 var special = ["!","?","@","#","$","%","/","'","-","_","~","(",")",".",":",","];
 
-// Functions that generate a random number within the length of the given array, and find the element corresponding to the index of that number in the same array
-function randomLower () {
-  return lower[Math.floor(Math.random()*lower.length)];
+// Include only character types that were confirmed by user
+var charTypes = []; 
+if (userLc === true) {
+  charTypes.push(lower);
 }
-function randomUpper () {
-  return upper[Math.floor(Math.random()*upper.length)];
+if (userUc === true) {
+  charTypes.push(upper);
 }
-function randomNum () {
-  return num[Math.floor(Math.random()*num.length)];
+if (userNum === true) {
+  charTypes.push(num);
 }
-function randomSpecial () {
-  return special[Math.floor(Math.random()*special.length)];
+if (userSc === true) {
+  charTypes.push(special);
+}
+
+function generatePassword() {
+  var userPass = "test test 123"
+  return userPass;
 }
