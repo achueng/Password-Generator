@@ -66,6 +66,5 @@ function generatePassword() {
     userPass += addPass;
   }
 
-  console.log(userPass);
   return userPass;
 }
