@@ -13,9 +13,6 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// Password length ** this variable declaration doesn't work
-// var passLength = Number(document.getElementById("pass-length").value);
-
 // Password characters to include
 var userLc = confirm("Do you want to include lowercase characters?");
 var userUc = confirm("Do you want to include uppercase characters?");
@@ -53,13 +50,14 @@ if (userSc === true) {
 
 // Generate password function with dummy text as placeholder to ensure it works
 function generatePassword() {
+  var passLength = Number(document.getElementById("pass-length").value);
   var userPass = ""
 
   // For loop to randomly take a character to include in password
   for (
     var i=0; 
     // Condition not using var because passLength var was faulty
-    i<Number(document.getElementById("pass-length").value); 
+    i<passLength;
     i++) {
     var char = charTypes[Math.floor(Math.random()*charTypes.length)];
     var addPass = char[Math.floor(Math.random()*char.length)];
