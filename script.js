@@ -22,6 +22,14 @@ var userUc = confirm("Do you want to include uppercase characters?");
 var userNum = confirm("Do you want to include numbers?");
 var userSc = confirm("Do you want to include special characters? Special characters include: !?@#$%/'-_~().:,");
 
+while (userLc === false && userUc === false && userNum === false && userSc === false) {
+  alert("At least one needs to be selected.");
+  userLc = confirm("Do you want to include lowercase characters?");
+  userUc = confirm("Do you want to include uppercase characters?");
+  userNum = confirm("Do you want to include numbers?");
+  userSc = confirm("Do you want to include special characters? Special characters include: !?@#$%/'-_~().:,");
+}
+
 // All possible characters
 var lower = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 var upper = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
@@ -43,7 +51,3 @@ if (userSc === true) {
   charTypes.push(special);
 }
 
-function generatePassword() {
-  var userPass = "test test 123"
-  return userPass;
-}
