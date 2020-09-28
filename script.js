@@ -13,8 +13,8 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// Password length
-var passLength = Number(document.querySelector("#pass-length").value);
+// Password length ** this variable declaration doesn't work
+// var passLength = Number(document.getElementById("pass-length").value);
 
 // Password characters to include
 var userLc = confirm("Do you want to include lowercase characters?");
