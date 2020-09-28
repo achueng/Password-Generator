@@ -55,10 +55,7 @@ function generatePassword() {
 
   // For loop to randomly take a character to include in password
   for (
-    var i=0; 
-    // Condition not using var because passLength var was faulty
-    i<passLength;
-    i++) {
+    var i=0; i<passLength; i++) {
     var char = charTypes[Math.floor(Math.random()*charTypes.length)];
     var addPass = char[Math.floor(Math.random()*char.length)];
     userPass += addPass;
