@@ -53,6 +53,14 @@ if (userSc === true) {
 
 // Generate password function with dummy text as placeholder to ensure it works
 function generatePassword() {
-  var userPass = "test test 123"
+  var userPass = ""
+
+  for (var i=0; i<10; i++) {
+    var char = charTypes[Math.floor(Math.random()*charTypes.length)];
+    var addPass = char[Math.floor(Math.random()*char.length)];
+    userPass += addPass;
+  }
+
+  console.log(userPass);
   return userPass;
 }
