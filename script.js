@@ -52,8 +52,8 @@ if (userSc === true) {
 function generatePassword() {
   var passLength = Number(document.getElementById("pass-length").value);
   // If user does not input a value for passLength, they will be alerted to do so before a password is generated
-  if (passLength === 0) {
-    alert("Please input how long you want your password to be.");
+  if (passLength < 8 || passLength > 128) {
+    alert("Please input a valid password length between 8 and 128.");
   }
 
   var userPass = ""
