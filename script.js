@@ -53,6 +53,7 @@ function generatePassword() {
     charTypes.push(special);
   }
 
+  // Define empty string to create final password
   var userPass = ""
 
   // For loop to randomly take a character to include in password
@@ -63,5 +64,6 @@ function generatePassword() {
     userPass += addPass;
   }
 
+  // Yield final password
   return userPass;
 }
