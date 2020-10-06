@@ -13,12 +13,6 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// Password characters to include
-// var userLc = confirm("Do you want to include lowercase characters?");
-// var userUc = confirm("Do you want to include uppercase characters?");
-// var userNum = confirm("Do you want to include numbers?");
-// var userSc = confirm("Do you want to include special characters? Special characters include: !?@#$%/'-_~().:,");
-
 // while (userLc === false && userUc === false && userNum === false && userSc === false) {
 //   alert("At least one needs to be selected.");
 //   userLc = confirm("Do you want to include lowercase characters?");
@@ -33,27 +27,33 @@ var upper = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q"
 var num = ["1","2","3","4","5","6","7","8","9","0"];
 var special = ["!","?","@","#","$","%","/","'","-","_","~","(",")",".",":",","];
 
-// Include only character types that were confirmed by user
-var charTypes = []; 
-if (userLc === true) {
-  charTypes.push(lower);
-}
-if (userUc === true) {
-  charTypes.push(upper);
-}
-if (userNum === true) {
-  charTypes.push(num);
-}
-if (userSc === true) {
-  charTypes.push(special);
-}
-
 // Generate password function with dummy text as placeholder to ensure it works
 function generatePassword() {
   var passLength = Number(document.getElementById("pass-length").value);
   // If user does not input a value for passLength, they will be alerted to do so before a password is generated
   if (passLength < 8 || passLength > 128) {
     alert("Please input a valid password length between 8 and 128.");
+  }
+
+  // Password characters to include
+  var userLc = document.getElementById("low").checked;
+  var userUc = document.getElementById("up").checked;
+  var userNum = document.getElementById("num").checked;
+  var userSc = document.getElementById("spec").checked;
+
+  // Include only character types that were confirmed by user
+  var charTypes = []; 
+  if (userLc === true) {
+    charTypes.push(lower);
+  }
+  if (userUc === true) {
+    charTypes.push(upper);
+  }
+  if (userNum === true) {
+    charTypes.push(num);
+  }
+  if (userSc === true) {
+    charTypes.push(special);
   }
 
   var userPass = ""
