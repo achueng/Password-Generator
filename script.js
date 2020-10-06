@@ -34,7 +34,7 @@ function generatePassword() {
   var userSc = document.getElementById("spec").checked;
 
   // If user does not choose at least one of the character types to include, they will be alerted to do so before a password is generated
-  while (userLc === false && userUc === false && userNum === false && userSc === false) {
+  if (userLc === false && userUc === false && userNum === false && userSc === false) {
     alert("At least one  character type needs to be selected.");
   }
 
